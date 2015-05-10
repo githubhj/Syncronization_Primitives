@@ -1,0 +1,12 @@
+time taken by for 2 nodes is 153.000000
+time taken by for 3 nodes is 429.000000
+time taken by for 4 nodes is 710.250000
+time taken by for 5 nodes is 1011.800000
+time taken by for 6 nodes is 946.833333
+time taken by for 7 nodes is 1604.142857
+time taken by for 8 nodes is 1214.750000
+time taken by for 9 nodes is 1549.555556
+time taken by for 10 nodes is 1711.900000
+time taken by for 11 nodes is 3115.727273
+time taken by for 12 nodes is 3245.333333
+

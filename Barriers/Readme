@@ -1,0 +1,28 @@
+Compilation details:
+
+run Makefile in each folder to compile
+
+Run Details:
+
+Tournament:
+
+mpirun -np X test_tournament
+
+Dissemination:
+
+mpirun -np X test_dissbarrier
+
+Combined 
+
+mpirun -np X combined Y
+
+(X = number of MPI nodes, Y = number of threads)
+
+Run Details:
+
+OpenMP:
+
+./main <no. of threads> <no. of iterations>
+
+./main <no. of threads> <no. of iterations>
+
