@@ -28,8 +28,11 @@ Implementation of locks and barriers in OpenMP and MPI. Ticket-lock and array-lo
 
 ## Barriers
 ------------------------
-##### OpenMP Barriers
+#####OpenMP Barriers
 
-#######Sensereveresal Barrier:
-* API implemented in /
+######Sensereveresal Barrier:
+* API implemented in /Barriers/OpenMP_Barriers/SenseReversal
+* Implemented three methods:
+  
+  1. 
 
