@@ -32,8 +32,20 @@ Implementation of locks and barriers in OpenMP and MPI. Ticket-lock and array-lo
 
 ######Sensereveresal Barrier:
 * API implemented in /Barriers/OpenMP_Barriers/SenseReversal
-* Implemented three methods:
+* Implemented two methods:
   
-  1. *void SenseReversalOpenMP_BarrierInit(num_threads, SenseReversalOpenMP_Barrier)*	: Initialize barrier with thread count and barrier data strcuture. 
-  2. *SenseReversalOpenMP_Barrier_Wait(SenseReversalOpenMP_Barrier, threadid)*	:	Wait method for threads. Last arriving barrier reinitializes max_count for barrier data structure and toggles global sense. 
+  1. *void SenseReversalOpenMP_BarrierInit(num_threads, SenseReversalOpenMP_Barrier)*	: Initialize barrier with thread count and barrier data structure. 
+  2. *McsTreeOpenMP_BarrierAwait(McsTreeOpenMP_Node, threadid)* : Wait method for threads. Last arriving barrier reinitializes max_count for barrier data structure and toggles global sense. 
+
+* Analysis: A multithreaded OpenMP program was used to evaluate contention and average wait time with respect to number of threads for the barrier.
+
+######MCS-Tree Barrier:
+* API implemented in /Barriers/OpenMP_Barriers/MCS
+* Barrier consist of B-Tree arrival and 4-ary wakeup.
+* Implemented two methods:
+  
+  1. *McsTreeOpenMP_BarrierInit(McsTreeOpenMP_Node mybarrier, long numthreads)*	: Initialize barrier with thread count and barrier tree data structure. 
+  2. *SenseReversalOpenMP_Barrier_Wait(SenseReversalOpenMP_Barrier, threadid)*	: Wait method for threads. Arriving barriers toggle parent arrived_child field. Each parent nodes loops until all children have arrived and propagtes arrival upwards to its parent node.
+
+* Analysis: A multithreaded OpenMP program was used to evaluate contention and average wait time with respect to number of threads for the barrier.
 
