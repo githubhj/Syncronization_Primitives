@@ -25,3 +25,11 @@ Implementation of locks and barriers in OpenMP and MPI. Ticket-lock and array-lo
   3. *void array_lock_release(array_lock_t)* : Release lock. Make current lock position in array as MUST WAIT and change current lock position + 1 as HAS LOCK.
   
 * Analysis: A multithreaded bubble sort is implemented using this lock API. Mutiple instanses with constant data segments are evaluate using Regress.py on a cluster with 2 6-core Intel Westmere processors and the results were noted on /Locks/[ECE 6101 PDCA]Homework4.pdf
+
+## Barriers
+------------------------
+##### OpenMP Barriers
+
+#######Sensereveresal Barrier:
+* API implemented in /
+
