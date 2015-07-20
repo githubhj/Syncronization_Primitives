@@ -34,5 +34,6 @@ Implementation of locks and barriers in OpenMP and MPI. Ticket-lock and array-lo
 * API implemented in /Barriers/OpenMP_Barriers/SenseReversal
 * Implemented three methods:
   
-  1. 
+  1. *void SenseReversalOpenMP_BarrierInit(num_threads, SenseReversalOpenMP_Barrier)*	: Initialize barrier with thread count and barrier data strcuture. 
+  2. *SenseReversalOpenMP_Barrier_Wait(SenseReversalOpenMP_Barrier, threadid)*	:	Wait method for threads. Last arriving barrier reinitializes max_count for barrier data structure and toggles global sense. 
 
